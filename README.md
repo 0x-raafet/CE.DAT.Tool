@@ -1,2 +1,2 @@
-# CE.DAT.Tool :see_no_evil:
+# CE.DAT.Tool :
 Unpack and Repack Version Under Develepment
