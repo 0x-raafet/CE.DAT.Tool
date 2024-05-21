@@ -31,10 +31,11 @@ namespace CE.Unpacker
 
             String m_Mode = args[0];
             String m_FileOrDir = args[1];
-            String m_Output = Utils.iCheckArgumentsPath(args[2]);
+            String m_Output = args[2];
 
             if (m_Mode == "unpack")
             {
+                m_Output = Utils.iCheckArgumentsPath(args[2]);
                 if (!File.Exists(m_FileOrDir))
                 {
                     Utils.iSetError("[ERROR]: Input DAT file -> " + m_FileOrDir + " <- does not exist");
@@ -45,6 +46,7 @@ namespace CE.Unpacker
             }
             else if (m_Mode == "pack")
             {
+                m_FileOrDir = Utils.iCheckArgumentsPath(args[1]);
                 if (!Directory.Exists(m_FileOrDir))
                 {
                     Utils.iSetError("[ERROR]: Input directory -> " + m_FileOrDir + " <- does not exist");
